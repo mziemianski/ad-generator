@@ -1,0 +1,2 @@
+Imie;Nazwisko;Nazwa_Uzytkownika;Haslo;Nazwa_Dzialu
+Jan;Kowalski;;;Finanse

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+  <!-- Ustawiony na True blokuje wywołanie opcji 0 ze skryptu (Przygotowanie środowiska) -->
+  <Configured>False</Configured>
+  <!-- Ustawiony na True ustawia parametr "Protect Object from accitental delection" -->
+  <ProtectOUFromDeletion>False</ProtectOUFromDeletion>
+  <!-- Ustawiony na True włącza rozszerzone logowanie" -->
+  <ExtendedDebugLogging>True</ExtendedDebugLogging>
+  <!-- DefaultNamingConvention = 1 ==> Pierwsza litera imienia + całe nazwisko (jkowalski) -->
+  <!-- DefaultNamingConvention = 2 ==> Pierwsza litera imienia + całe nazwisko odzielone kropką (j.kowalski) -->
+  <!-- DefaultNamingConvention = 3 ==> Imię + nazwisko oddzielone kropką (jan.kowalski) -->
+  <!-- DefaultNamingConvention = 4 ==> Imię + nazwisko odzielone _ (jan_kowalski) -->
+  <DefaultNamingConvention>1</DefaultNamingConvention>
+  <!-- Definicja plików logowania -->
+  <!-- Definicja plików logowania - podstawowy plik dziennika-->
+  <LogFilePath>generator_1.log</LogFilePath>
+  <!-- Definicja plików logowania - plik dziennika do logowania pominiętych obiektów (np. próba założenia konta o takiej samej nazwie) -->
+  <MissedUsersLogPath>generator_2.log</MissedUsersLogPath>
+  <!-- Nazwa serwera plików -->
+  <FileServer>FS01</FileServer>
+  <!-- Nazwa głównej jednostki organizacyjnej, w której bedą domyślnie tworzone obiekty -->
+  <Install_OU>Install</Install_OU>
+  <!-- Nazwa głównej jednostki organizacyjnej, do której bedą przekierowane konta komputerów -->
+  <Komputery_OU>OU_Komputery</Komputery_OU>
+  <!-- domyślne hasło dla generowanych kont użytkowników -->
+  <DefaultPassword>P@ssw0rd</DefaultPassword>
+  <!-- Plik CSV dla kont użytkowników -->
+  <!-- Format pliku -->
+  <!-- Imie;Nazwisko;Nazwa_uzytkownika;Haslo;Nazwa_Dzialu -->
+  <UsersFilePath>users.txt</UsersFilePath>
+  <!-- Plik CSV dla jednostek organizacyjnych i grup -->
+  <!-- Format pliku -->
+  <!-- NazwaDzialu;Czy_Tworzyc_OGOLNY;Czy_Tworzyc_DZIALY -->
+  <GroupsFilePath>dzialy.txt</GroupsFilePath>
+  <!-- Definicja udziału HOME -->
+  <HOME>
+    <!-- Ścieżka UNC udziału HOME -->
+    <UNC>\\FS01\HOME</UNC>
+    <!-- Ścieżka UNC ADM udziału HOME -->
+    <AdminUNC>\\FS01\E$\HOME</AdminUNC>
+    <!-- Lokalna ścieżka udziału HOME -->
+    <Local>E:\HOME</Local>
+    <!-- Nazwa udziału HOME -->
+    <ShareName>HOME</ShareName>
+    <!-- Litera dysku profilu użytkownika -->
+    <DriveLetter>H:</DriveLetter>
+  </HOME>
+  <!-- Definicja udziału PROFILES -->
+  <PROFILES>
+    <!-- Ścieżka UNC udziału PROFILES -->
+    <UNC>\\FS01\PROFILES$</UNC>
+    <!-- Ścieżka UNC ADM udziału PROFILES -->
+    <AdminUNC>\\FS01\E$\PROFILES</AdminUNC>
+    <!-- Lokalna ścieżka udziału PROFILES -->
+    <Local>E:\PROFILES</Local>
+    <!-- Nazwa udziału PROFILES -->
+    <ShareName>PROFILES$</ShareName>
+    <!-- Włączenie Roaming Profiles -->
+    <RoammingProfiles>False</RoammingProfiles>
+  </PROFILES>
+  <!-- Definicja udziału DZIALY -->
+  <DZIALY>
+    <!-- Ścieżka UNC udziału DZIALY -->
+    <UNC>\\FS01\DZIALY</UNC>
+    <!-- Ścieżka UNC ADM udziału DZIALY -->
+    <AdminUNC>\\FS01\E$\DZIALY</AdminUNC>
+    <!-- Lokalna ścieżka udziału DZIALY -->
+    <Local>E:\DZIALY</Local>
+    <!-- Nazwa udziału DZIALY -->
+    <ShareName>DZIALY</ShareName>
+  </DZIALY>
+  <!-- Definicja udziału OGOLNY -->
+  <OGOLNY>
+    <!-- Ścieżka UNC udziału OGOLNY -->
+    <UNC>\\FS01\OGOLNY</UNC>
+    <!-- Ścieżka UNC ADM udziału OGOLNY -->
+    <AdminUNC>\\FS01\E$\OGOLNY</AdminUNC>
+    <!-- Lokalna ścieżka udziału OGOLNY -->
+    <Local>E:\OGOLNY</Local>
+    <!-- Nazwa udziału OGOLNY -->
+    <ShareName>OGOLNY</ShareName>
+  </OGOLNY>
+  <!-- Definicja udziału SKANY -->
+  <SKANY>
+    <!-- Ścieżka UNC udziału SKANY -->
+    <UNC>\\FS01\SKANY</UNC>
+    <!-- Ścieżka UNC ADM udziału SKANY -->
+    <AdminUNC>\\FS01\E$\SKANY</AdminUNC>
+    <!-- Lokalna ścieżka udziału SKANY -->
+    <Local>E:\SKANY</Local>
+    <!-- Nazwa udziału SKANY -->
+    <ShareName>SKANY</ShareName>
+  </SKANY>
+</Settings>
