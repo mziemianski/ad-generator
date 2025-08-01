@@ -1203,7 +1203,7 @@ function Initialize-Environment {
                 Log-Operation ("Utworzono katalog " + $share.Path + " na " + $FileServer) "OK" "KATALOG"
             }
             else {
-                Log-Operation ("Katalog " + $share.Path + " już istnieje na " + $FileServer) "OK" "KATALOG"
+                Log-Operation ("Katalog " + $share.Path + " już istnieje na " + $FileServer) "WARN" "KATALOG"
             }
         }
         catch {
@@ -1329,7 +1329,7 @@ function Repair-UserAccount {
         }
     }
     else {
-        Log-Operation "Serwis: Katalogi HOME i SKANY istnieją dla $SamAccountName" "OK" "SERWIS"
+        Log-Operation "Serwis: Katalogi HOME i SKANY istnieją dla $SamAccountName" "WARN" "SERWIS"
         $resp = Read-Host "Czy naprawić uprawnienia NTFS w katalogach HOME i SKANY? (T/N)"
         if ($resp -eq 'T' -or $resp -eq 't') {
             Set-UserHomeOrSkanyPermissions -Path $homePathAdmin -UserSam $SamAccountName -DomainNetbios $domainNetbios -LogPrefix "HOME naprawa"
